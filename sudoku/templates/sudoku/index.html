@@ -1,3 +1,8 @@
 <p>
-lala
+{% for row in grid.cells %}
+    {% for cell in row %}
+    <input>{% if cell != 0 %}cell{% endif %}</input>
+    {% endfor %}
+    </br>
+{% endfor %}
 </p>
