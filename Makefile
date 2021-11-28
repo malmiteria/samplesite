@@ -5,7 +5,7 @@ install-virtualenv:
 	./local.virtualenv/bin/pip install -r requirements.txt --find-links "file://${HOME}/.pip/wheelhouse"
 
 shell:
-	./local.virtualenv/bin/ptpython --vi
+	./local.virtualenv/bin/python3.9 manage.py shell
 
 run-server:
 	./local.virtualenv/bin/python3.9 manage.py runserver

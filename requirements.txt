@@ -1,3 +1,4 @@
 ptpython
+psycopg2
 
 django
