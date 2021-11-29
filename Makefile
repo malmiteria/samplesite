@@ -9,3 +9,6 @@ shell:
 
 run-server:
 	./local.virtualenv/bin/python3.9 manage.py runserver
+
+test:
+	./local.virtualenv/bin/python3.9 manage.py test
