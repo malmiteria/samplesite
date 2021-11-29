@@ -25,3 +25,8 @@ def edit_grid(request, grid_id):
         'grid': sudoku
     }
     return render(request, 'sudoku/edit_grid.html', context)
+
+def delete_grid(request, grid_id):
+    Sudoku.objects.filter(id=grid_id).delete()
+    context = {}
+    return render(request, 'sudoku/index.html', {'grids': Sudoku.objects.all()})
