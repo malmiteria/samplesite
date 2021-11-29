@@ -1,8 +1,5 @@
 <p>
-{% for row in grid.grid %}
-    {% for cell in row %}
-    <input>{% if cell != 0 %}cell{% endif %}</input>
-    {% endfor %}
-    </br>
+{% for grid in grids %}
+    <a href="/sudoku/edit/{{grid.id}}">grille numéro : {{ grid.id }}</a> </br>
 {% endfor %}
 </p>

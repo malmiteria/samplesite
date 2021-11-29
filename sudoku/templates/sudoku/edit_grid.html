@@ -1,0 +1,11 @@
+<p>
+<form action="{{grid.id}}" method="POST">
+    {% csrf_token %}
+    {% for row in grid.grid %}
+        {% for cell in row %}
+            <input id="id_cell({{ forloop.parentloop.counter0 }}, {{ forloop.counter0 }})" name="cell({{ forloop.parentloop.counter0 }}, {{ forloop.counter0 }})" value="{% if cell != 0 %}{{cell}}{% endif %}"></input>
+        {% endfor %}
+        </br>
+    {% endfor %}
+    <input type="submit" value="Valider">
+</p>
