@@ -74,9 +74,18 @@ WSGI_APPLICATION = 'samplesite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-SYSTEM_ENV = os.environ.get('SYSTEM_ENV', None)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sudoku',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
-if SYSTEM_ENV == 'GITHUB_WORKFLOW':
+if os.environ.get('GITHUB_WORKFLOW'):
     SECRET_KEY = 'TESTING_KEY'
     DATABASES = {
         'default': {
@@ -88,18 +97,6 @@ if SYSTEM_ENV == 'GITHUB_WORKFLOW':
             'PORT': '5432',
         }
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'sudoku',
-            'USER': 'postgres',
-            'PASSWORD': 'postgres',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        }
-    }
-
 
 
 
