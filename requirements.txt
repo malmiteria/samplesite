@@ -2,3 +2,5 @@ ptpython
 psycopg2
 
 django
+
+coverage

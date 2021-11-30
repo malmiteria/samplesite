@@ -15,3 +15,8 @@ test:
 
 migrate:
 	./local.virtualenv/bin/python3.9 manage.py migrate
+
+coverage:
+	./local.virtualenv/bin/coverage run --source='.' manage.py test
+	./local.virtualenv/bin/coverage report
+
