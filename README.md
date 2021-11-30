@@ -1,5 +1,6 @@
 
-This program runs in python 3.9, with a postgresql database.
+This program is a web based sudoku game.
+It runs in python 3.9, with django, and a postgresql database.
 it expects a database named sudoku hosted on localhost, port 5432
 the database username and password are expected to be 'postgres'
 
