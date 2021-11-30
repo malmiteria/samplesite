@@ -12,3 +12,6 @@ run-server:
 
 test:
 	./local.virtualenv/bin/python3.9 manage.py test
+
+migrate:
+	./local.virtualenv/bin/python3.9 manage.py migrate
