@@ -34,3 +34,7 @@ Locally run server :
 ```
 make run-server
 ```
+
+You can access the sudoku pages at [http://127.0.0.1:8000/sudoku/]
+
+The UX is definitely not perfect, you don't always have feedback on your actions, but it is functional.

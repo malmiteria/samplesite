@@ -1,6 +1,6 @@
 <p>
 {% for grid in grids %}
-<a href="/sudoku/edit/{{ grid.id }}">grille numéro : {{ grid.id }}</a> <a href="/sudoku/delete/{{ grid.id }}">delete</a></br>
+<a href="/sudoku/edit/{{ grid.id }}">sudoku number : {{ grid.id }}</a> <a href="/sudoku/delete/{{ grid.id }}">delete</a></br>
 {% endfor %}
 <a href="/sudoku/create">create new one</a>
 </p>

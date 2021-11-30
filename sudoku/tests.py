@@ -70,3 +70,21 @@ class SudokuModelTestCase(TestCase):
 
         assert list(sudoku.possible_number(0, 0)) == [1]
 
+
+    def test_possible_number_on_col_row_and_square_limiting(self):
+        sudoku = Sudoku.objects.create()
+        sudoku.grid = [
+            [0, 0, 0, 7, 8, 9, 0, 0, 0],
+            [0, 2, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 3, 0, 0, 0, 0, 0, 0],
+            [4, 0, 0, 0, 0, 0, 0, 0, 0],
+            [5, 0, 0, 0, 0, 0, 0, 0, 0],
+            [6, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        ]
+        sudoku.save()
+
+        assert list(sudoku.possible_number(0, 0)) == [1]
+
