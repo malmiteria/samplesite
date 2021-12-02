@@ -4,19 +4,14 @@ install-virtualenv:
 	./local.virtualenv/bin/pip install setuptools pip wheel -U
 	./local.virtualenv/bin/pip install -r requirements.txt --find-links "file://${HOME}/.pip/wheelhouse"
 
-shell:
-	./local.virtualenv/bin/python3.9 manage.py shell
-
 run-server:
-	./local.virtualenv/bin/python3.9 manage.py runserver
+	docker-compose run web
 
 test:
-	./local.virtualenv/bin/python3.9 manage.py test
+	docker-compose run test
 
 migrate:
-	./local.virtualenv/bin/python3.9 manage.py migrate
+	docker-compose run migrate
 
 coverage:
-	./local.virtualenv/bin/coverage run --source='.' manage.py test
-	./local.virtualenv/bin/coverage report
-
+	docker-compose run coverage
